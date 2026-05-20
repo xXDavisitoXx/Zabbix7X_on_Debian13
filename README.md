@@ -89,6 +89,11 @@ Import schema database:
 ```bash
 zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u zabbixdb psql -d dbzabbix
 ```
+Execute schema TimeScaleDB:
+```bash
+sudo -u postgres psql -d dbzabbix -f /usr/share/zabbix-sql-scripts/postgresql/timescaledb/schema.sql
+```
+
 Restart database service:
 ```bash
 systemctl restart postgresql
