@@ -1,11 +1,13 @@
 # Zabbix7 on Debian13
 
-## Install Zabbix repository
-
+## Install Zabbix repository:
 ```bash
-# wget https://repo.zabbix.com/zabbix/7.4/release/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.4+debian13_all.deb
-# dpkg -i zabbix-release_latest_7.4+debian13_all.deb
-# apt update
+sudo wget https://repo.zabbix.com/zabbix/7.4/release/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.4+debian13_all.deb
+sudo dpkg -i zabbix-release_latest_7.4+debian13_all.deb
+```
+Refresh APT:
+```bash
+sudo apt update
 ```
 ---
 ## Install Zabbix server, frontend, agent
