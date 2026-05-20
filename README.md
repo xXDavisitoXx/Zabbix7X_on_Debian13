@@ -93,9 +93,23 @@ Restart database service:
 ```bash
 systemctl restart postgresql
 ```
-
-
-
-
-
+Skip TimescaleDB version restriction:
+Edit file:
+```bash
+nano /etc/zabbix/zabbix_server.conf
+```
+Uncomment and set the AllowUnsupportedDBVersions parameter to 1:
+```bash
+nano /etc/zabbix/zabbix_server.conf
+```
+```bash
+### Option: AllowUnsupportedDBVersions
+#       Allow server to work with unsupported database versions.
+#       0 - do not allow
+#       1 - allow
+#
+# Mandatory: no
+# Default:
+AllowUnsupportedDBVersions=1
+```
 
