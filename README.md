@@ -23,7 +23,7 @@ data_directory = '/mnt/database/postgresql/17/main'  # use data in another direc
 sudo systemctl start postgresql
 ```
 ```bash
-sudo systemctl start postgresql
+sudo pg_lsclusters
 ```
 ```bash
 Ver Cluster Port Status Owner    Data directory              Log file
