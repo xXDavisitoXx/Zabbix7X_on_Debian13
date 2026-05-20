@@ -7,7 +7,6 @@
 # dpkg -i zabbix-release_latest_7.4+debian13_all.deb
 # apt update
 ```
-
 ---
 ## Install Zabbix server, frontend, agent
 
@@ -35,9 +34,11 @@ Edit data directory
 ```bash
 data_directory = '/mnt/database/postgresql/17/main'  # use data in another directory
 ```
+Restart database service:
 ```bash
 sudo systemctl start postgresql
 ```
+Test new config:
 ```bash
 sudo pg_lsclusters
 ```
@@ -45,10 +46,15 @@ sudo pg_lsclusters
 Ver Cluster Port Status Owner    Data directory              Log file
 17  main    5432 online postgres /mnt/database/postgresql/17/main /var/log/postgresql/postgresql-17-main.log
 ```
-
+Create user zabbixdb
 ```bash
-sudo systemctl start postgresql
+sudo -u postgres createuser --pwprompt zabbixdb
 ```
+Create database  dbzabbix:
+```bash
+sudo -u postgres createdb -O zabbixdb dbzabbix
+```
+
 ## Install TimeScaleDB
 Download the repository keys:
 ```bash
@@ -73,13 +79,9 @@ Configure TimeScale for PostgreSQL:
 ```bash
 sudo timescaledb-tune --quiet --yes
 ```
-Create user zabbixdb
+Activate TimeScaleDB on dbzabbix:
 ```bash
-sudo -u postgres createuser --pwprompt zabbixdb
-```
-Create database  dbzabbix:
-```bash
-sudo -u postgres createdb -O zabbixdb dbzabbix
+sudo -u postgres psql -d dbzabbix -c "CREATE EXTENSION IF NOT EXISTS timescaledb;"
 ```
 Import schema database:
 ```bash
@@ -89,6 +91,7 @@ Restart database service:
 ```bash
 systemctl restart postgresql
 ```
+
 
 
 
