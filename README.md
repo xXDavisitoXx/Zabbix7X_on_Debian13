@@ -1,11 +1,13 @@
 # Zabbix7 on Debian13
 ## Install software
 ### Install system packages:
+As root user:
 ```bash
-sudo apt update
-sudo apt rysnc sudo
+apt update
+apt rysnc sudo
 ```
 ### Install Zabbix repository:
+As normal user:
 ```bash
 sudo wget https://repo.zabbix.com/zabbix/7.4/release/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.4+debian13_all.deb
 sudo dpkg -i zabbix-release_latest_7.4+debian13_all.deb
