@@ -25,7 +25,7 @@ sudo apt update
 ### Install PostgreSQL
 ```bash
 sudo apt update
-sudo apt install postgresql postgresql-contrib rysnc
+sudo apt install postgresql postgresql-contrib
 ```
 ### Install Zabbix server, frontend, agent
 ```bash
