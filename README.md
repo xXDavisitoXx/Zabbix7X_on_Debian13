@@ -117,6 +117,26 @@ Restart database service:
 ```bash
 sudo systemctl restart postgresql
 ```
+Test TimeScaleDB:
+```bash
+ sudo -u postgres psql -d dbzabbix -c "SELECT hypertable_name FROM timescaledb_information.hypertables;"
+```
+Correct result:
+```bash
+  hypertable_name
+-----------------
+ history
+ history_uint
+ history_log
+ history_text
+ history_str
+ history_bin
+ auditlog
+ trends
+ trends_uint
+(9 filas)
+```
+
 ## Configure Zabbix server:
 ### Skip TimescaleDB version restriction:
 Uncomment and set the AllowUnsupportedDBVersions parameter to 1:
