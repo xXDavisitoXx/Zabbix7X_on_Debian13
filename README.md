@@ -107,7 +107,7 @@ sudo -u postgres psql -d dbzabbix -c "CREATE EXTENSION IF NOT EXISTS timescaledb
 ```
 Import schema database:
 ```bash
-sudo zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u postgres psql -U zabbixdb dbzabbix
+sudo zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u postgres psql dbzabbix
 ```
 Execute schema optimization TimeScaleDB:
 ```bash
