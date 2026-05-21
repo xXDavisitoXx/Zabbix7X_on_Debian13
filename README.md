@@ -100,16 +100,12 @@ Execute schema optimization TimeScaleDB:
 ```bash
 sudo -u postgres psql -d dbzabbix -f /usr/share/zabbix-sql-scripts/postgresql/timescaledb/schema.sql
 ```
-
 Restart database service:
 ```bash
 systemctl restart postgresql
 ```
-Skip TimescaleDB version restriction:
-Edit file:
-```bash
-nano /etc/zabbix/zabbix_server.conf
-```
+## Configure Zabbix server:
+### Skip TimescaleDB version restriction:
 Uncomment and set the AllowUnsupportedDBVersions parameter to 1:
 ```bash
 nano /etc/zabbix/zabbix_server.conf
@@ -124,4 +120,45 @@ nano /etc/zabbix/zabbix_server.conf
 # Default:
 AllowUnsupportedDBVersions=1
 ```
+### Configure the database credentials for zabbix server:
+Change parameters 
+```bash
+nano /etc/zabbix/zabbix_server.conf
+```
+```bash
+### Option: DBName
+#       Database name.
+#       If the Net Service Name connection method is used to connect to Oracle database, specify the service name from
+#       the tnsnames.ora file or set to empty string; also see the TWO_TASK environment variable if DBName is set to
+#       empty string.
+#
+# Mandatory: yes
+# Default:
+# DBName=
 
+DBName=dbzabbix
+
+### Option: DBSchema
+#       Schema name. Used for PostgreSQL.
+#
+# Mandatory: no
+# Default:
+# DBSchema=
+
+### Option: DBUser
+#       Database user.
+#
+# Mandatory: no
+# Default:
+# DBUser=
+
+DBUser=zabbixdb
+
+### Option: DBPassword
+#       Database password.
+#       Comment this line if no password is used.
+#
+# Mandatory: no
+# Default:
+DBPassword=YOUR PASSWORD DB
+```
