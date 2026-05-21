@@ -56,6 +56,7 @@ Create user zabbixdb
 sudo -u postgres createuser --pwprompt zabbixdb
 ```
 ⚠️ Save the password you set for later use
+
 Create database  dbzabbix:
 ```bash
 sudo -u postgres createdb -O zabbixdb dbzabbix
