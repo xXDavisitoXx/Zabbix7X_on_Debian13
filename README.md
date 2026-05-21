@@ -91,7 +91,7 @@ sudo apt update
 ```
 Install TimeScaleDB from APT:
 ```bash
-sudo apt install timescaledb-2-postgresql-17
+sudo apt install timescaledb-2-postgresql-17=2.26.4~debian13-1709
 ```
 Configure TimeScale for PostgreSQL:
 ```bash
