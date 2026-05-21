@@ -92,7 +92,7 @@ sudo apt update
 ```
 Install TimeScaleDB from APT:
 ```bash
-apt install timescaledb-2-postgresql-17
+sudo apt install timescaledb-2-postgresql-17
 ```
 Configure TimeScale for PostgreSQL:
 ```bash
@@ -108,7 +108,7 @@ sudo -u postgres psql -d dbzabbix -c "CREATE EXTENSION IF NOT EXISTS timescaledb
 ```
 Import schema database:
 ```bash
-zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u postgres psql -U zabbixdb dbzabbix
+sudo zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u postgres psql -U zabbixdb dbzabbix
 ```
 Execute schema optimization TimeScaleDB:
 ```bash
@@ -116,13 +116,13 @@ sudo -u postgres psql -d dbzabbix -f /usr/share/zabbix-sql-scripts/postgresql/ti
 ```
 Restart database service:
 ```bash
-systemctl restart postgresql
+sudo systemctl restart postgresql
 ```
 ## Configure Zabbix server:
 ### Skip TimescaleDB version restriction:
 Uncomment and set the AllowUnsupportedDBVersions parameter to 1:
 ```bash
-nano /etc/zabbix/zabbix_server.conf
+sudo nano /etc/zabbix/zabbix_server.conf
 ```
 ```bash
 ### Option: AllowUnsupportedDBVersions
@@ -137,7 +137,7 @@ AllowUnsupportedDBVersions=1
 ### Configure the database credentials for zabbix server:
 Change parameters 
 ```bash
-nano /etc/zabbix/zabbix_server.conf
+sudo nano /etc/zabbix/zabbix_server.conf
 ```
 ```bash
 ### Option: DBName
@@ -178,7 +178,7 @@ DBPassword=YOUR PASSWORD DB
 ```
 Enable global scripts:
 ```bash
-nano /etc/zabbix/zabbix_server.conf
+sudo nano /etc/zabbix/zabbix_server.conf
 ```
 ```bash
 ### Option: EnableGlobalScripts
@@ -193,7 +193,7 @@ EnableGlobalScripts=1
 ### Configure PHP for Zabbix frontend:
 Uncomment the listen and server_name lines with the parameters that will be used in the URL; this can be a DNS name or an IP address:
 ```bash
-nano /etc/zabbix/nginx.conf
+sudo nano /etc/zabbix/nginx.conf
 ```
 ```bash
 server {
@@ -202,11 +202,11 @@ server {
 ```
 Restart web services:
 ```bash
-systemctl restart zabbix-server zabbix-agent nginx php8.4-fpm
+sudo systemctl restart zabbix-server zabbix-agent nginx php8.4-fpm
 ```
 
 ### 
 Enable services: 
 ```bash
-systemctl enable zabbix-server zabbix-agent nginx php8.4-fpm postgresql
+sudo systemctl enable zabbix-server zabbix-agent nginx php8.4-fpm postgresql
 ```
