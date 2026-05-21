@@ -29,7 +29,7 @@ apt install nginx php-fpm
 sudo systemctl stop postgresql
 sudo mkdir -p /mnt/database/postgresql/17/main/ # Or the custom path where you want the database to live
 sudo rsync -av /var/lib/postgresql/17/main/ /mnt/database/postgresql/17/main/
-sudo chown -R postgres:postgres /mnt/database/postgresql/17/main
+sudo chown -R postgres:postgres /mnt/database/postgresql
 ```
 Edit data directory
 ```bash
