@@ -1,6 +1,5 @@
 # Zabbix7 on Debian13
 ## Install software
-
 ### Install Zabbix repository:
 ```bash
 sudo wget https://repo.zabbix.com/zabbix/7.4/release/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.4+debian13_all.deb
