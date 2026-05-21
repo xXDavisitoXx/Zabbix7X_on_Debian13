@@ -9,8 +9,8 @@ apt install rsync sudo gnupg
 Add our system user to sudo:
 ```bash
 usermod -aG sudo YOUR_USER
-exit
 ```
+exit the session
 ### Install Zabbix repository:
 As normal user:
 ```bash
