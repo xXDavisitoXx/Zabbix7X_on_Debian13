@@ -40,7 +40,7 @@ Edit data directory
 ```bash
 data_directory = '/mnt/database/postgresql/17/main'  # use data in another directory
 ```
-Restart database service:
+Start database service:
 ```bash
 sudo systemctl start postgresql
 ```
@@ -86,6 +86,10 @@ Configure TimeScale for PostgreSQL:
 ```bash
 sudo timescaledb-tune --quiet --yes
 ```
+Restart service:
+```bash
+sudo systemctl restart postgresql
+```
 Activate TimeScaleDB on dbzabbix:
 ```bash
 sudo -u postgres psql -d dbzabbix -c "CREATE EXTENSION IF NOT EXISTS timescaledb;"
@@ -94,7 +98,7 @@ Import schema database:
 ```bash
 zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u postgres psql dbzabbix
 ```
-Execute schema TimeScaleDB:
+Execute schema optimization TimeScaleDB:
 ```bash
 sudo -u postgres psql -d dbzabbix -f /usr/share/zabbix-sql-scripts/postgresql/timescaledb/schema.sql
 ```
