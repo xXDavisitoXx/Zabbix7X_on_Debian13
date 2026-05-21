@@ -6,6 +6,11 @@ As root user:
 apt update
 apt rysnc sudo
 ```
+Add our system user to sudo:
+```bash
+usermod -aG sudo YOUR_USER
+exit
+```
 ### Install Zabbix repository:
 As normal user:
 ```bash
