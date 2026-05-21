@@ -29,11 +29,11 @@ sudo apt install postgresql postgresql-contrib rysnc
 ```
 ### Install Zabbix server, frontend, agent
 ```bash
-apt install zabbix-server-pgsql zabbix-frontend-php php8.4-pgsql zabbix-nginx-conf zabbix-sql-scripts zabbix-agent
+sudo apt install zabbix-server-pgsql zabbix-frontend-php php8.4-pgsql zabbix-nginx-conf zabbix-sql-scripts zabbix-agent
 ```
 ### Install Nginx
 ```bash
-apt install nginx php-fpm
+sudo apt install nginx php-fpm
 ```
 ## Configure PostgreSQL 
 ### Configure the database directory (a separate disk from the system is recommended)
