@@ -82,9 +82,8 @@ sudo curl -fsSL https://packagecloud.io/timescale/timescaledb/gpgkey \
 ```
 Install the repository of TimeScaleDB:
 ```bash
-sudo echo "deb [signed-by=/usr/share/keyrings/timescaledb.gpg] \
-https://packagecloud.io/timescale/timescaledb/debian/ trixie main" \
-> /etc/apt/sources.list.d/timescaledb.list
+echo "deb [signed-by=/usr/share/keyrings/timescaledb.gpg] https://packagecloud.io/timescale/timescaledb/debian/ trixie main" \
+| sudo tee /etc/apt/sources.list.d/timescaledb.list > /dev/null
 ```
 Refresh APT:
 ```bash
