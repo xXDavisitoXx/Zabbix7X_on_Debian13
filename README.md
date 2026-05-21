@@ -164,3 +164,17 @@ DBUser=zabbixdb
 # Default:
 DBPassword=YOUR PASSWORD DB
 ```
+Enable global scripts:
+```bash
+nano /etc/zabbix/zabbix_server.conf
+```
+```bash
+### Option: EnableGlobalScripts
+#    Enable global scripts on Zabbix server.
+#       0 - disable
+#       1 - enable
+#
+# Mandatory: no
+# Default:
+EnableGlobalScripts=1
+```
