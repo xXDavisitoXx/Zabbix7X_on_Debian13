@@ -10,19 +10,18 @@ Refresh APT:
 sudo apt update
 ```
 ---
+### Install PostgreSQL
+```bash
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+```
 ### Install Zabbix server, frontend, agent
-
 ```bash
 apt install zabbix-server-pgsql zabbix-frontend-php php8.4-pgsql zabbix-nginx-conf zabbix-sql-scripts zabbix-agent
 ```
 ### Install Nginx
 ```bash
 apt install nginx php-fpm
-```
-### Install PostgreSQL
-```bash
-sudo apt update
-sudo apt install postgresql postgresql-contrib
 ```
 ## Configure PostgreSQL 
 ### Configure the database directory (a separate disk from the system is recommended)
