@@ -4,7 +4,7 @@
 As root user:
 ```bash
 apt update
-apt install rysnc sudo gnupg
+apt install rsync sudo gnupg
 ```
 Add our system user to sudo:
 ```bash
