@@ -50,7 +50,7 @@ sudo pg_lsclusters
 Ver Cluster Port Status Owner    Data directory              Log file
 17  main    5432 online postgres /mnt/database/postgresql/17/main /var/log/postgresql/postgresql-17-main.log
 ```
-### Configure database acces
+### Configure database acces:
 Create user zabbixdb
 ```bash
 sudo -u postgres createuser --pwprompt zabbixdb
@@ -60,7 +60,7 @@ Create database  dbzabbix:
 sudo -u postgres createdb -O zabbixdb dbzabbix
 ```
 
-### Install TimeScaleDB plugin 
+### Install TimeScaleDB plugin:
 Download the repository keys:
 ```bash
 sudo curl -fsSL https://packagecloud.io/timescale/timescaledb/gpgkey \
@@ -94,7 +94,7 @@ sudo -u postgres psql -d dbzabbix -c "CREATE EXTENSION IF NOT EXISTS timescaledb
 ```
 Import schema database:
 ```bash
-zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u postgres psql dbzabbix
+zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u postgres psql -U zabbixdb dbzabbix
 ```
 Execute schema optimization TimeScaleDB:
 ```bash
