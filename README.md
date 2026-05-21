@@ -97,7 +97,7 @@ Configure TimeScale for PostgreSQL:
 ```bash
 sudo timescaledb-tune --quiet --yes
 ```
-Restart service:
+Restart database service:
 ```bash
 sudo systemctl restart postgresql
 ```
@@ -112,10 +112,6 @@ sudo zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | sudo -u postg
 Execute schema optimization TimeScaleDB:
 ```bash
 sudo -u postgres psql -d dbzabbix -f /usr/share/zabbix/sql-scripts/postgresql/timescaledb/schema.sql
-```
-Restart database service:
-```bash
-sudo systemctl restart postgresql
 ```
 Test TimeScaleDB:
 ```bash
