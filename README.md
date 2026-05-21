@@ -4,7 +4,7 @@
 As root user:
 ```bash
 apt update
-apt rysnc sudo
+apt rysnc sudo gnupg
 ```
 Add our system user to sudo:
 ```bash
