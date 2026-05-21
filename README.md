@@ -1,6 +1,7 @@
 # Zabbix7 on Debian13
+## Install software
 
-## Install Zabbix repository:
+### Install Zabbix repository:
 ```bash
 sudo wget https://repo.zabbix.com/zabbix/7.4/release/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.4+debian13_all.deb
 sudo dpkg -i zabbix-release_latest_7.4+debian13_all.deb
@@ -10,19 +11,22 @@ Refresh APT:
 sudo apt update
 ```
 ---
-## Install Zabbix server, frontend, agent
+### Install Zabbix server, frontend, agent
 
 ```bash
 apt install zabbix-server-pgsql zabbix-frontend-php php8.4-pgsql zabbix-nginx-conf zabbix-sql-scripts zabbix-agent
 ```
-
-## Install PostgreSQL
+### Install Nginx
+```bash
+apt install nginx php-fpm
+```
+### Install PostgreSQL
 ```bash
 sudo apt update
 sudo apt install postgresql postgresql-contrib
 ```
-Configure the database directory (a separate disk from the system is recommended)
-
+## Configure PostgreSQL 
+### Configure the database directory (a separate disk from the system is recommended)
 ```bash
 sudo systemctl stop postgresql
 sudo mkdir -p /mnt/database/postgresql/17/main/ # Or the custom path where you want the database to live
@@ -48,6 +52,7 @@ sudo pg_lsclusters
 Ver Cluster Port Status Owner    Data directory              Log file
 17  main    5432 online postgres /mnt/database/postgresql/17/main /var/log/postgresql/postgresql-17-main.log
 ```
+### Configure database acces
 Create user zabbixdb
 ```bash
 sudo -u postgres createuser --pwprompt zabbixdb
@@ -57,7 +62,7 @@ Create database  dbzabbix:
 sudo -u postgres createdb -O zabbixdb dbzabbix
 ```
 
-## Install TimeScaleDB
+### Install TimeScaleDB plugin 
 Download the repository keys:
 ```bash
 sudo curl -fsSL https://packagecloud.io/timescale/timescaledb/gpgkey \
