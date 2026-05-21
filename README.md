@@ -178,3 +178,23 @@ nano /etc/zabbix/zabbix_server.conf
 # Default:
 EnableGlobalScripts=1
 ```
+### Configure PHP for Zabbix frontend:
+Uncomment the listen and server_name lines with the parameters that will be used in the URL; this can be a DNS name or an IP address:
+```bash
+nano /etc/zabbix/nginx.conf
+```
+```bash
+server {
+        listen          8080;
+        server_name     192.168.1.100;
+```
+Restart web services:
+```bash
+systemctl restart zabbix-server zabbix-agent nginx php8.4-fpm
+```
+
+### 
+Enable services: 
+```bash
+systemctl enable zabbix-server zabbix-agent nginx php8.4-fpm postgresql
+```
