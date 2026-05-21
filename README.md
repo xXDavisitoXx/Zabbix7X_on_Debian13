@@ -78,7 +78,7 @@ sudo -u postgres createdb -O zabbixdb dbzabbix
 Download the repository keys:
 ```bash
 sudo curl -fsSL https://packagecloud.io/timescale/timescaledb/gpgkey \
-| gpg --dearmor -o /usr/share/keyrings/timescaledb.gpg
+| sudo gpg --dearmor -o /usr/share/keyrings/timescaledb.gpg
 ```
 Install the repository of TimeScaleDB:
 ```bash
