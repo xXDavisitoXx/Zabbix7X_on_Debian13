@@ -224,5 +224,19 @@ sudo systemctl enable zabbix-server zabbix-agent nginx php8.4-fpm postgresql
 ### Configure Web for Zabbix frontend:
 Access the URL https://YOUR_IP:8080 from your browser
 :warning: In the language selector, if you want a language other than English, you must install it first on the operating system and then restart the Zabbix and PHP services.
+```bash
+sudo apt update
+sudo apt install locales
+sudo dpkg-reconfigure locales
+```
+ Inside the menu, for example select:
+```bash
+es_ES.UTF-8 UTF-8
+ ```
+Then, optionally, you can set it as the system’s default locale:
+After that, you can verify it with:
+```bash
+locale
+ ```
 
 
