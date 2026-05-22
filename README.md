@@ -106,11 +106,11 @@ Import schema database:
 
 If you use Zabbix 7.0 LTS:
 ```bash
-sudo zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | psql -U zabbixdb -d dbzabbix -h localhost
+zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | psql -U zabbixdb -d dbzabbix -h localhost
 ```
 If you use Zabbix7.4:
 ```bash
-sudo zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | psql -U zabbixdb -d dbzabbix -h localhost
+zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | psql -U zabbixdb -d dbzabbix -h localhost
 ```
 Execute schema optimization TimeScaleDB:
 ```bash
