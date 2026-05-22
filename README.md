@@ -201,7 +201,7 @@ sudo nano /etc/zabbix/zabbix_server.conf
 EnableGlobalScripts=1
 # EnableGlobalScripts=0
 ```
-### Configure PHP for Zabbix frontend:
+### Configure Nginx for Zabbix frontend:
 Uncomment the listen and server_name lines with the parameters that will be used in the URL; this can be a DNS name or an IP address:
 ```bash
 sudo nano /etc/zabbix/nginx.conf
@@ -221,3 +221,8 @@ Enable services:
 ```bash
 sudo systemctl enable zabbix-server zabbix-agent nginx php8.4-fpm postgresql
 ```
+### Configure Web for Zabbix frontend:
+Access the URL https://YOUR_IP:8080 from your browser
+:warning: In the language selector, if you want a language other than English, you must install it first on the operating system and then restart the Zabbix and PHP services.
+
+
