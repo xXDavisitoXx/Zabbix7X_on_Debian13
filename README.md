@@ -102,7 +102,7 @@ sudo -u postgres psql -d dbzabbix -c "CREATE EXTENSION IF NOT EXISTS timescaledb
 ```
 Import schema database:
 
-:warning: The paths for importing the database schemas changed starting from Zabbix 7.4
+⚠️ The paths for importing the database schemas changed starting from Zabbix 7.4
 
 If you use Zabbix 7.0 LTS:
 ```bash
@@ -113,6 +113,7 @@ If you use Zabbix7.4:
 zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | psql -U zabbixdb -d dbzabbix -h localhost
 ```
 Execute schema optimization TimeScaleDB:
+⚠️ The paths for importing the database schemas changed starting from Zabbix 7.4
 
 If you use Zabbix 7.0 LTS:
 ```bash
