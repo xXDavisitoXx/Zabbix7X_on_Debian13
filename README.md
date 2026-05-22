@@ -10,9 +10,14 @@ Add our system user to sudo:
 ```bash
 usermod -aG sudo YOUR_USER
 ```
-exit the session
+Exit the root session; from now on we will use our regular system user
+---
+### Install PostgreSQL
+```bash
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+```
 ### Install Zabbix repository:
-As normal user:
 ```bash
 sudo wget https://repo.zabbix.com/zabbix/7.4/release/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.4+debian13_all.deb
 sudo dpkg -i zabbix-release_latest_7.4+debian13_all.deb
@@ -20,12 +25,6 @@ sudo dpkg -i zabbix-release_latest_7.4+debian13_all.deb
 Refresh APT:
 ```bash
 sudo apt update
-```
----
-### Install PostgreSQL
-```bash
-sudo apt update
-sudo apt install postgresql postgresql-contrib
 ```
 ### Install Zabbix server, frontend, agent
 ```bash
