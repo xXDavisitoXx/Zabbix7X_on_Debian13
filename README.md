@@ -184,7 +184,7 @@ DBUser=zabbixdb
 #
 # Mandatory: no
 # Default:
-DBPassword=YOUR PASSWORD DB
+DBPassword=YOUR_PASSWORD_USER_DB
 ```
 Enable global scripts:
 ```bash
