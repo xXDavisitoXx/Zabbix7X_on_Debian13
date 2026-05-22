@@ -28,11 +28,7 @@ sudo apt update
 ```
 ### Install Zabbix server, frontend, agent
 ```bash
-sudo apt install zabbix-server-pgsql zabbix-frontend-php php8.4-pgsql zabbix-nginx-conf zabbix-sql-scripts zabbix-agent
-```
-### Install Nginx
-```bash
-sudo apt install nginx php-fpm
+sudo apt install zabbix-server-pgsql zabbix-frontend-php php8.4-pgsql zabbix-nginx-conf zabbix-sql-scripts zabbix-agent nginx php-fpm
 ```
 ## Configure PostgreSQL 
 ### Configure the database directory (a separate disk from the system is recommended)
