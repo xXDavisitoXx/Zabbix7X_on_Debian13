@@ -114,7 +114,7 @@ zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | psql -U zabbixdb -
 ```
 Execute schema optimization TimeScaleDB:
 
-⚠️ The paths for importing the database schemas changed starting from Zabbix 7.4
+⚠️ The paths for executing schema optimizations changed starting from Zabbix 7.4
 
 If you use Zabbix 7.0 LTS:
 ```bash
