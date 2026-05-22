@@ -1,4 +1,4 @@
-# Zabbix7 on Debian13
+# Zabbix7.X on Debian13
 ## Install software
 ### Install system packages:
 As root user:
