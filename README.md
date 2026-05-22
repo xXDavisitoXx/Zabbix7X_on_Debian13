@@ -10,7 +10,7 @@ Add our system user to sudo:
 ```bash
 usermod -aG sudo YOUR_USER
 ```
-Exit the root session; from now on we will use our regular system user
+Exit the root session, from now on we will use our regular system user
 ---
 ### Install PostgreSQL
 ```bash
