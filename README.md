@@ -145,7 +145,7 @@ sudo nano /etc/zabbix/zabbix_server.conf
 AllowUnsupportedDBVersions=1
 ```
 ### Configure the database credentials for zabbix server:
-Change parameters 
+Change parameters, in this file, we will add the password for the PostgreSQL user zabbixdb that we created earlier
 ```bash
 sudo nano /etc/zabbix/zabbix_server.conf
 ```
