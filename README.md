@@ -26,7 +26,7 @@ Refresh APT:
 ```bash
 sudo apt update
 ```
-### Install Zabbix server, frontend, agent
+### Install Zabbix server, frontend, Zabbix agent, Nginx 
 ```bash
 sudo apt install zabbix-server-pgsql zabbix-frontend-php php8.4-pgsql zabbix-nginx-conf zabbix-sql-scripts zabbix-agent nginx php-fpm
 ```
