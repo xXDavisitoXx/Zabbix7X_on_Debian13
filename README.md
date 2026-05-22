@@ -18,10 +18,20 @@ sudo apt update
 sudo apt install postgresql postgresql-contrib
 ```
 ### Install Zabbix repository:
+⚠️ Depending on the version you want, you will have to choose between the following repositories
+
+If you want Zabbix 7 LTS, use:
 ```bash
 wget https://repo.zabbix.com/zabbix/7.0/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.0+debian13_all.deb
 sudo dpkg -i zabbix-release_latest_7.0+debian13_all.deb
 ```
+
+If you want Zabbix 7.4, use:
+```bash
+wget https://repo.zabbix.com/zabbix/7.4/release/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.4+debian13_all.deb
+sudo dpkg -i zabbix-release_latest_7.4+debian13_all.deb
+```
+
 Refresh APT:
 ```bash
 sudo apt update
