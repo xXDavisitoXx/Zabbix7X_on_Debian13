@@ -101,6 +101,7 @@ Activate TimeScaleDB on dbzabbix:
 sudo -u postgres psql -d dbzabbix -c "CREATE EXTENSION IF NOT EXISTS timescaledb;"
 ```
 Import schema database:
+
 :warning: The paths for importing the database schemas changed starting from Zabbix 7.4.
 If you use Zabbix 7.0 LTS:
 ```bash
