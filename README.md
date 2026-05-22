@@ -199,7 +199,7 @@ sudo nano /etc/zabbix/zabbix_server.conf
 # Mandatory: no
 # Default:
 EnableGlobalScripts=1
-#EnableGlobalScripts=0
+# EnableGlobalScripts=0
 ```
 ### Configure PHP for Zabbix frontend:
 Uncomment the listen and server_name lines with the parameters that will be used in the URL; this can be a DNS name or an IP address:
