@@ -132,6 +132,7 @@ Install TimeScaleDB from APT:
 sudo apt install timescaledb-2-postgresql-17=2.26.4~debian13-1709 timescaledb-2-loader-postgresql-17=2.26.4~debian13-1709
 ```
 Configure TimeScale for PostgreSQL:
+The command sudo timescaledb-tune --quiet --yes is an automatic optimization tool that analyzes your server resources (such as RAM and CPU) and automatically adjusts the parameters of the postgresql.conf file
 ```bash
 sudo timescaledb-tune --quiet --yes
 ```
