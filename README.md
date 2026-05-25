@@ -26,7 +26,7 @@ usermod -aG sudo YOUR_USER
 
 ---
 ### Install PostgreSQL
-Debian 13 uses PostgreSQL 17 by default. If you use another Linux distribution or install the PostgreSQL repositories, the version may be 18. In our guide, stability takes priority over everything else, and this is what Debian recommends
+Debian13 uses PostgreSQL17 by default. If you use another Linux distribution or install the PostgreSQL repositories, the version may be 18. In our guide, stability takes priority over everything else, and this is what Debian recommends
 ```bash
 sudo apt update
 sudo apt install postgresql postgresql-contrib
@@ -56,8 +56,10 @@ sudo apt update
 sudo apt install zabbix-server-pgsql zabbix-frontend-php php8.4-pgsql zabbix-nginx-conf zabbix-sql-scripts zabbix-agent nginx php-fpm
 ```
 ## Configure PostgreSQL 
-### Change the database directory
-This step is optional. We recommend separating the database onto another disk for security, management, and performance reasons. By being on a separate disk, it won’t perform writes on the system disk, and if it fills up, it won’t bring the Debian system down. If you don’t want to change the PostgreSQL directory, you can safely skip this step
+### Change the database directory to another disk
+This step is optional. We recommend separating the database onto another disk for security, management, and performance reasons. By being on a separate disk, it won’t perform writes on the system disk, and if it fills up, it won’t bring the Debian system down. 
+We have previously created a 20GB disk and mounted it as ext4 at /mnt/database
+If you don’t want to change the PostgreSQL directory, you can safely skip this step
 ```bash
 sudo systemctl stop postgresql
 sudo mkdir -p /mnt/database/postgresql/17/main/ # Or the custom path where you want the database to live
