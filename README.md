@@ -104,6 +104,15 @@ sudo -u postgres createdb -O zabbixdb dbzabbix
 ```
 
 ### Install TimeScaleDB plugin:
+TimescaleDB is an extension for PostgreSQL that transforms it into a database optimized for time-series data. For Zabbix, it works by automatically splitting large history tables into time-based ‘chunks’, which are invisible to the user but extremely efficient for the system.
+
+Goodbye to slowdowns (efficient Housekeeper): Instead of deleting records one by one (which slows down the server), TimescaleDB removes entire time chunks instantly and with virtually zero CPU cost.
+
+Significant disk savings: It enables native compression that reduces the storage used by historical data by between 60% and 90%.
+Consistent performance: It prevents Zabbix from slowing down over time. Read and write speeds for graphs remain fast regardless of database size.
+
+Using TimescaleDB is essential if you are going to monitor a medium or large environment, as it prevents the most common Zabbix bottleneck: database saturation.
+
 Download the repository keys:
 ```bash
 sudo curl -fsSL https://packagecloud.io/timescale/timescaledb/gpgkey \
