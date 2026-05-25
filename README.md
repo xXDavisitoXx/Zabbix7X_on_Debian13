@@ -57,8 +57,10 @@ sudo apt install zabbix-server-pgsql zabbix-frontend-php php8.4-pgsql zabbix-ngi
 ```
 ## Configure PostgreSQL 
 ### Change the database directory to another disk
-This step is optional. We recommend separating the database onto another disk for security, management, and performance reasons. By being on a separate disk, it won’t perform writes on the system disk, and if it fills up, it won’t bring the Debian system down. 
+This step is optional. We recommend separating the database onto another disk for security, management, and performance reasons. By being on a separate disk, it won’t perform writes on the system disk, and if it fills up, it won’t bring the Debian system down.
+
 We have previously created a 20GB disk and mounted it as ext4 at /mnt/database
+
 If you don’t want to change the PostgreSQL directory, you can safely skip this step
 ```bash
 sudo systemctl stop postgresql
