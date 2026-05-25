@@ -3,7 +3,10 @@
 In this guide, we will teach the correct installation of Zabbix 7 step by step, covering both the LTS version and the latest 7.4 release on Debian 13, using a PostgreSQL database with the TimeScaleDB plugin and the Nginx web server.
 
 ---
-
+<p align="center">
+  <img src="Images/Repository/Zabbix7-Cover.png" alt="Zabbix7-Cover" width="100%">
+</p>
+--
 ## Install software
 ### Install system packages:
 As root user:
