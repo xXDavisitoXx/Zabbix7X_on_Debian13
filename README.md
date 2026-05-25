@@ -88,6 +88,8 @@ Ver Cluster Port Status Owner    Data directory              Log file
 17  main    5432 online postgres /mnt/database/postgresql/17/main /var/log/postgresql/postgresql-17-main.log
 ```
 ### Configure database acces:
+In most step-by-step guides, the credentials are usually zabbix / zabbix. This often creates confusion between the system user, the database user, or even within the command syntax that follows. We have changed the names for a much more secure installation and one that is easier to understand
+
 Create user zabbixdb
 ```bash
 sudo -u postgres createuser --pwprompt zabbixdb
