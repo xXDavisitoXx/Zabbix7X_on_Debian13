@@ -61,7 +61,7 @@ This step is optional. We recommend separating the database onto another disk fo
 
 We have previously created a 20GB disk and mounted it as ext4 at /mnt/database
 
-If you don’t want to change the PostgreSQL directory, you can safely skip this step
+❌ If you don’t want to change the PostgreSQL directory, you can safely skip this step
 ```bash
 sudo systemctl stop postgresql
 sudo mkdir -p /mnt/database/postgresql/17/main/ # Or the custom path where you want the database to live
