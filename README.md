@@ -56,7 +56,7 @@ sudo apt update
 sudo apt install zabbix-server-pgsql zabbix-frontend-php php8.4-pgsql zabbix-nginx-conf zabbix-sql-scripts zabbix-agent nginx php-fpm
 ```
 ## Configure PostgreSQL 
-Change the database directory to another disk
+### Change the database directory to another disk
 
 This step is optional. We recommend separating the database onto another disk for security, management, and performance reasons. By being on a separate disk, it won’t perform writes on the system disk, and if it fills up, it won’t bring the Debian system down.
 
@@ -81,6 +81,7 @@ Start database service:
 sudo systemctl start postgresql
 ```
 Test new config:
+When executing the command, the new path we created for the database directory should be reflected.
 ```bash
 sudo pg_lsclusters
 ```
