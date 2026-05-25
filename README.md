@@ -188,9 +188,23 @@ Correct result:
  trends_uint
 (9 filas)
 ```
-
+### Skip TimescaleDB version restriction:
+⚠️ This step is only necessary if you have installed software versions that Zabbix does not support by default. Use it at your own risk; we include it so you are aware that it exists.
+Uncomment and set the AllowUnsupportedDBVersions parameter to 1:
+```bash
+sudo nano /etc/zabbix/zabbix_server.conf
+```
+```bash
+### Option: AllowUnsupportedDBVersions
+#       Allow server to work with unsupported database versions.
+#       0 - do not allow
+#       1 - allow
+#
+# Mandatory: no
+# Default:
+AllowUnsupportedDBVersions=1
+```
 ## Configure Zabbix server:
-
 ### Configure the database credentials for zabbix server:
 Change parameters, in this file, we will add the password for the PostgreSQL user zabbixdb that we created earlier
 ```bash
@@ -286,20 +300,3 @@ After that, you can verify it with:
 ```bash
 locale
  ```
-
-### Skip TimescaleDB version restriction:
-⚠️ This step is only necessary if you have installed software versions that Zabbix does not support by default. Use it at your own risk; we include it so you are aware that it exists.
-Uncomment and set the AllowUnsupportedDBVersions parameter to 1:
-```bash
-sudo nano /etc/zabbix/zabbix_server.conf
-```
-```bash
-### Option: AllowUnsupportedDBVersions
-#       Allow server to work with unsupported database versions.
-#       0 - do not allow
-#       1 - allow
-#
-# Mandatory: no
-# Default:
-AllowUnsupportedDBVersions=1
-```
