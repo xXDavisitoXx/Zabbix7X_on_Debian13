@@ -263,6 +263,24 @@ sudo nano /etc/zabbix/zabbix_server.conf
 EnableGlobalScripts=1
 # EnableGlobalScripts=0
 ```
+### Configure language for Zabbix frontend:
+For Zabbix to support any language, it must be installed on the operating system. By default, we will install en_US.UTF-8 and es_ES.UTF-8, as they are the most widely used worldwide
+:warning: In the language selector, if you want a language other than English, you must install it first on the operating system and then restart the Zabbix and PHP services.
+```bash
+sudo apt update
+sudo apt install locales
+sudo dpkg-reconfigure locales
+```
+ Inside the menu, for example select:
+```bash
+es_ES.UTF-8 UTF-8 or en_US.UTF-8
+ ```
+Then, optionally, you can set it as the system’s default locale:
+After that, you can verify it with:
+```bash
+locale
+ ```
+
 ### Configure Nginx for Zabbix frontend:
 Uncomment the listen and server_name lines with the parameters that will be used in the URL; this can be a DNS name or an IP address:
 ```bash
@@ -283,20 +301,3 @@ Enable services:
 ```bash
 sudo systemctl enable zabbix-server zabbix-agent nginx php8.4-fpm postgresql
 ```
-### Configure Web for Zabbix frontend:
-Access the URL https://YOUR_IP:8080 from your browser
-:warning: In the language selector, if you want a language other than English, you must install it first on the operating system and then restart the Zabbix and PHP services.
-```bash
-sudo apt update
-sudo apt install locales
-sudo dpkg-reconfigure locales
-```
- Inside the menu, for example select:
-```bash
-es_ES.UTF-8 UTF-8
- ```
-Then, optionally, you can set it as the system’s default locale:
-After that, you can verify it with:
-```bash
-locale
- ```
