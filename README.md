@@ -52,6 +52,7 @@ Refresh APT:
 sudo apt update
 ```
 ### Install Zabbix server, frontend, Zabbix agent, Nginx 
+Install packages:
 ```bash
 sudo apt install zabbix-server-pgsql zabbix-frontend-php php8.4-pgsql zabbix-nginx-conf zabbix-sql-scripts zabbix-agent nginx php-fpm
 ```
@@ -69,7 +70,7 @@ sudo mkdir -p /mnt/database/postgresql/17/main/ # Or the custom path where you w
 sudo rsync -av /var/lib/postgresql/17/main/ /mnt/database/postgresql/17/main/
 sudo chown -R postgres:postgres /mnt/database/postgresql
 ```
-Edit data directory
+Edit data directory:
 ```bash
  sudo nano /etc/postgresql/17/main/postgresql.conf
 ```
@@ -92,13 +93,13 @@ Ver Cluster Port Status Owner    Data directory              Log file
 ### Configure database acces:
 In most step-by-step guides, the credentials are usually zabbix / zabbix. This often creates confusion between the system user, the database user, or even within the command syntax that follows. We have changed the names for a much more secure installation and one that is easier to understand
 
-Create user zabbixdb
+Create user zabbixdb:
 ```bash
 sudo -u postgres createuser --pwprompt zabbixdb
 ```
 ⚠️ Save the password you set for later use
 
-Create database  dbzabbix:
+Create database dbzabbix:
 ```bash
 sudo -u postgres createdb -O zabbixdb dbzabbix
 ```
@@ -272,15 +273,35 @@ sudo apt install locales
 sudo dpkg-reconfigure locales
 ```
  Inside the menu, for example select:
+
 ```bash
-es_ES.UTF-8 UTF-8 or en_US.UTF-8
+Generating locales (this might take a while)...
+  en_US.UTF-8... done
+  es_ES.UTF-8... done
+Generation complete.
  ```
 Then, optionally, you can set it as the system’s default locale:
 After that, you can verify it with:
 ```bash
 locale
  ```
-
+```bash
+LANG=es_ES.UTF-8
+LANGUAGE=
+LC_CTYPE="es_ES.UTF-8"
+LC_NUMERIC="es_ES.UTF-8"
+LC_TIME="es_ES.UTF-8"
+LC_COLLATE="es_ES.UTF-8"
+LC_MONETARY="es_ES.UTF-8"
+LC_MESSAGES="es_ES.UTF-8"
+LC_PAPER="es_ES.UTF-8"
+LC_NAME="es_ES.UTF-8"
+LC_ADDRESS="es_ES.UTF-8"
+LC_TELEPHONE="es_ES.UTF-8"
+LC_MEASUREMENT="es_ES.UTF-8"
+LC_IDENTIFICATION="es_ES.UTF-8"
+LC_ALL=
+ ```
 ### Configure Nginx for Zabbix frontend:
 Uncomment the listen and server_name lines with the parameters that will be used in the URL; this can be a DNS name or an IP address:
 ```bash
