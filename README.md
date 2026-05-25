@@ -146,7 +146,7 @@ sudo -u postgres psql -d dbzabbix -c "CREATE EXTENSION IF NOT EXISTS timescaledb
 ```
 Import schema database:
 
-⚠️ The paths for importing the database schemas changed starting from Zabbix 7.4
+⚠️ The paths for importing the database schemas changed starting from Zabbix 7.4, use one or the other depending on the installation you want
 
 If you use Zabbix 7.0 LTS:
 ```bash
@@ -169,6 +169,7 @@ If you use Zabbix7.4:
 sudo -u postgres psql -d dbzabbix -f /usr/share/zabbix/sql-scripts/postgresql/timescaledb/schema.sql
 ```
 Test TimeScaleDB:
+This test confirms that TimescaleDB is working in Zabbix because it verifies that the historical tables (such as history or trends) have been converted into hypertables, which is TimescaleDB’s special format for handling time-series data. If these tables appear in the query results, it means the extension is active, properly integrated into the database, and managing automatic time-based partitioning.
 ```bash
  sudo -u postgres psql -d dbzabbix -c "SELECT hypertable_name FROM timescaledb_information.hypertables;"
 ```
@@ -189,21 +190,7 @@ Correct result:
 ```
 
 ## Configure Zabbix server:
-### Skip TimescaleDB version restriction:
-Uncomment and set the AllowUnsupportedDBVersions parameter to 1:
-```bash
-sudo nano /etc/zabbix/zabbix_server.conf
-```
-```bash
-### Option: AllowUnsupportedDBVersions
-#       Allow server to work with unsupported database versions.
-#       0 - do not allow
-#       1 - allow
-#
-# Mandatory: no
-# Default:
-AllowUnsupportedDBVersions=1
-```
+
 ### Configure the database credentials for zabbix server:
 Change parameters, in this file, we will add the password for the PostgreSQL user zabbixdb that we created earlier
 ```bash
@@ -299,4 +286,19 @@ After that, you can verify it with:
 locale
  ```
 
-
+### Skip TimescaleDB version restriction:
+⚠️ This step is only necessary if you have installed software versions that Zabbix does not support by default. Use it at your own risk; we include it so you are aware that it exists.
+Uncomment and set the AllowUnsupportedDBVersions parameter to 1:
+```bash
+sudo nano /etc/zabbix/zabbix_server.conf
+```
+```bash
+### Option: AllowUnsupportedDBVersions
+#       Allow server to work with unsupported database versions.
+#       0 - do not allow
+#       1 - allow
+#
+# Mandatory: no
+# Default:
+AllowUnsupportedDBVersions=1
+```
