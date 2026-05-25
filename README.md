@@ -234,6 +234,7 @@ DBUser=zabbixdb
 DBPassword=YOUR_PASSWORD_DB_USER
 ```
 Enable global scripts:
+This will enable commands such as right-clicking on hosts and using the ping button
 ```bash
 sudo nano /etc/zabbix/zabbix_server.conf
 ```
