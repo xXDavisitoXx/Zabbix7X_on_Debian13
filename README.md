@@ -14,6 +14,7 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 * ♻️ [Features](#recycle-features)
 * ✅ [Requirements](#white_check_mark-requirements)
 * ⚙️ [Install basic software](#gear-install-basic-software)
+* 🧰 [Configure PostgreSQL](#toolbox-configure-postgresql)
 
 ## :recycle: Features
 
