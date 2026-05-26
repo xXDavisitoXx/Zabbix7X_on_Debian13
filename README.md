@@ -10,13 +10,13 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 ---
 ## :recycle: Features
 
-Compatible with any Debian-based distribution
-The most powerful build you can make of Zabbix
-PostgreSQL is among the top databases
-TimeScaleDB will speed up PostgreSQL and compress the database
-Nginx is among the top web servers
-Database installation on a separate disk
-Guide 100% tested in production environments
+- Compatible with any Debian-based distribution
+- The most powerful build you can make of Zabbix
+- PostgreSQL is among the top databases
+- TimeScaleDB will speed up PostgreSQL and compress the database
+- Nginx is among the top web servers
+- Database installation on a separate disk
+- Guide 100% tested in production environments
 
 ## :white_check_mark: Requirements
 
