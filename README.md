@@ -13,6 +13,7 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 * 👮 [Terms of use](./LICENSE)
 * ♻️ [Features](#recycle-features)
 * ✅ [Requirements](#white_check_mark-requirements)
+* ⚙️ [Install basic software](#gear-install_basic_software)
 
 ## :recycle: Features
 
