@@ -132,7 +132,7 @@ Install TimeScaleDB from APT:
 ```bash
 sudo apt install timescaledb-2-postgresql-17=2.26.4~debian13-1709 timescaledb-2-loader-postgresql-17=2.26.4~debian13-1709
 ```
-## Configure Software
+## Configure TimeScaleDB
 Now, with all the software installed on the server, we proceed to its configuration so that all the components fit together perfectly.
 
 ### Tune TimeScale for PostgreSQL:
