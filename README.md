@@ -16,6 +16,8 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 * ⚙️ [Install basic software](#gear-install-basic-software)
 * 🧰 [Configure PostgreSQL](#toolbox-configure-postgresql)
 * 🕛 [Configure TimeScaleDB](#clock12-configure-timescaledb)
+* 🛠️ [Configure Zabbix server](#hammer_and_wrench-configure-zabbix-server)
+* 
 
 ## :recycle: Features
 
