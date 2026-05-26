@@ -9,6 +9,23 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 
 ---
 
+## :book: Indice
+* :cop: [Terminos de uso](./LICENSE)
+* :atom: [Caracteristicas](#atom-caracteristicas)
+* :white_check_mark: [Requisitos](#white_check_mark-requisitos)
+* :package: [Instalar Zabbix Repository](#package-instalar-zabbix-repository)
+* :hammer_and_wrench: [Instalar Zabbix Server, Frontend y Agent](#hammer_and_wrench-instalar-zabbix-server-frontend-y-agent)
+* :elephant: [Instalar y configurar PostgreSQL](#elephant-instalar-y-configurar-postgresql)
+  * [Crear la base de datos](#crear-la-base-de-datos)
+  * [Importar el esquema inicial](#importar-el-esquema-inicial)
+* :gear: [Configurar Zabbix Server](#gear-configurar-zabbix-server)
+* :rocket: [Iniciar y habilitar servicios](#rocket-iniciar-y-habilitar-servicios)
+* :globe_with_meridians: [Configuracion web inicial](#globe_with_meridians-configuracion-web-inicial)
+* :lock: [Ajustes de seguridad recomendados](#lock-ajustes-de-seguridad-recomendados)
+* :ballot_box_with_check: [Verificacion y comprobaciones](#ballot_box_with_check-verificacion-y-comprobaciones)
+* :rotating_light: [Problemas comunes y soluciones](#rotating_light-problemas-comunes-y-soluciones)
+* :books: [Referencias](#books-referencias)
+
 ## Install basic software 
 ### Install system packages:
 First, we are going to install the software and the necessary tools to minimize the use of the root user.
