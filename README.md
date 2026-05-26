@@ -19,6 +19,8 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 * 🛠️ [Configure Zabbix server](#hammer_and_wrench-configure-zabbix-server)
 * 🖥️ [Configure Nginx for Zabbix frontend](#desktop_computer-configure-nginx-for-zabbix-frontend)
 * 🔗 [Final web server configuration](#link-final-web-server-configuration)
+* ⚔️ [Login](#crossed_swords-login)
+* 🔭 [Front](#telescope-front)
 
 ## :recycle: Features
 
