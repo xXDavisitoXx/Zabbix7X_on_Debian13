@@ -20,12 +20,12 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 
 ## :white_check_mark: Requirements
 
-Basic knowledge of Linux
-Basic knowledge of databases
-One 20GB disk and another 10GB disk (if possible)
-4GB of RAM or more, depending on the environment
-Between 2 and 4 CPU cores, depending on the environment
-Internet connection to install software
+- Basic knowledge of Linux
+- Basic knowledge of databases
+- One 20GB disk and another 10GB disk (if possible)
+- 4GB of RAM or more, depending on the environment
+- Between 2 and 4 CPU cores, depending on the environment
+- Internet connection to install software
 
 ## :gear: Install basic software 
 
