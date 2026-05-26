@@ -369,4 +369,5 @@ Perhaps the most important screen of the entire setup wizard; here we will enter
 - User: zabbixdb
 - Password: The password you created when setting up the “zabbixdb” user in PostgreSQL
 - Database TLS encryption: Activated
+  
 ![Config DB Zabbix](Images/7-LTS/Zabbix7_3-ConfigDB.png)
