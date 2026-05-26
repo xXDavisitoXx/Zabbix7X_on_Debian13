@@ -314,7 +314,7 @@ Restart web services:
 ```bash
 sudo systemctl restart zabbix-server zabbix-agent nginx php8.4-fpm
 ```
-
+If after restarting all services any of them fail, review the steps carefully until everything works correctly. On the other hand, if after restarting there are no errors, you will be able to access via the web at http://YOUR_IP:8080 and proceed with the final server configuration.
 ### 
 Enable services: 
 ```bash
@@ -346,3 +346,4 @@ tcp6       0      0 :::111                  :::*                    LISTEN      
 tcp6       0      0 :::10050                :::*                    LISTEN      1446/zabbix_agentd
 tcp6       0      0 :::10051                :::*                    LISTEN      -
 ```
+## Final web server configuration
