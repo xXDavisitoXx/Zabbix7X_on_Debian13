@@ -394,10 +394,14 @@ Congratulations! I hope you enjoy it a lot 🎉
 ![Congrats Zabbix](Images/7-LTS/Zabbix7_6-Congrats.png)
 
 ## Login
-
 Now that the installation is complete, we only need to log in to the web application using the default Zabbix credentials.
 
 - User: Admin
 - Pass: zabbix
 
 ![Login Zabbix](Images/7-LTS/Zabbix7_7-login.png)
+
+## Front
+From this point on, a world of endless possibilities and deep control over our infrastructure begins. We strongly recommend changing the default credentials of the web Admin user, adjusting the profile, customizing the frontend widgets, and creating users with roles tailored to each use case depending on who will manage the system. Security can never be taken too seriously, and the information handled by monitoring systems is often highly sensitive.
+
+![Front Zabbix](Images/7-LTS/Zabbix7_8-Front.png)
