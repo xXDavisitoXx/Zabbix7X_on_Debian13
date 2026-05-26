@@ -352,3 +352,7 @@ Both the initial setup wizard of Zabbix 7.0 LTS and Zabbix 7.4 are exactly the s
 ### Initial screen: 
 Here we configure the language that Zabbix will use by default in the web interface (it can be changed later at any time from the options panel). The languages must be installed beforehand on the operating system in order to be selected (follow the "dpkg-reconfigure locales" section earlier in this guide). If you have not done so, you will need to install the corresponding language and restart the services again.
 ![Portada Zabbix](Images/7-LTS/Zabbix7_1-portada.png)
+
+### Second screen, prerequisites:
+Zabbix will check that all required components are installed in compatible versions. If you have followed this guide step by step, everything should appear as OK and you will only need to click “Next.” If anything is not OK, review it manually and restart the Zabbix services again.
+![Requisitos Zabbix](Images/7-LTS/Zabbix7_2-Requisitos.png)
