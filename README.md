@@ -321,6 +321,7 @@ Enable services:
 sudo systemctl enable zabbix-server zabbix-agent nginx php8.4-fpm postgresql
 ```
 Check ports avaliable:
+Make sure that the services are active and listening on the correct port:
 ```bash
 netstat -tnlp
 ```
