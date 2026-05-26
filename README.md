@@ -10,8 +10,8 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 
 ## :book: Index
 
-* :cop: [Terms of use](./LICENSE)
-* :atom: [Features](#recycle-features)
+* 👮 [Terms of use](./LICENSE)
+* ♻️ [Features](#recycle-features)
 * :white_check_mark: [Requirements](#white_check_mark-requisitos)
 
 ## :recycle: Features
