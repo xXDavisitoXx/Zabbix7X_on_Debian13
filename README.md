@@ -388,6 +388,16 @@ This screen is simply a summary of everything we have entered in the wizard befo
 ![Summary Zabbix](Images/7-LTS/Zabbix7_5-Sumary.png)
 
 ### Sixth and final screen, we are done
-If everything has gone correctly, our server is now ready for use and has created the file /etc/zabbix/web/zabbix.conf.php with all the parameters we entered in the wizard. Congratulations! I hope you enjoy it a lot 🎉
+If everything has gone correctly, our server is now ready for use and has created the file /etc/zabbix/web/zabbix.conf.php with all the parameters we entered in the wizard. 
+Congratulations! I hope you enjoy it a lot 🎉
 
 ![Congrats Zabbix](Images/7-LTS/Zabbix7_6-Congrats.png)
+
+## Login
+
+Now that the installation is complete, we only need to log in to the web application using the default Zabbix credentials.
+
+- User: Admin
+- Pass: zabbix
+
+![Login Zabbix](Images/7-LTS/Zabbix7_7-login.png)
