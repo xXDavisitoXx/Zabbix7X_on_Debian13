@@ -57,7 +57,7 @@ Install packages:
 ```bash
 sudo apt install zabbix-server-pgsql zabbix-frontend-php php8.4-pgsql zabbix-nginx-conf zabbix-sql-scripts zabbix-agent nginx php-fpm
 ```
-## Configure PostgreSQL 
+## :toolbox: Configure PostgreSQL 
 
 ### Change the database directory to another disk
 This step is optional. We recommend separating the database onto another disk for security, management, and performance reasons. By being on a separate disk, it won’t perform writes on the system disk, and if it fills up, it won’t bring the Debian system down.
@@ -133,7 +133,7 @@ Install TimeScaleDB from APT:
 ```bash
 sudo apt install timescaledb-2-postgresql-17=2.26.4~debian13-1709 timescaledb-2-loader-postgresql-17=2.26.4~debian13-1709
 ```
-## Configure TimeScaleDB
+## :clock12: Configure TimeScaleDB
 Now, with all the software installed on the server, we proceed to its configuration so that all the components fit together perfectly.
 
 ### Tune TimeScale for PostgreSQL:
@@ -208,7 +208,7 @@ sudo nano /etc/zabbix/zabbix_server.conf
 # Default:
 AllowUnsupportedDBVersions=1
 ```
-## Configure Zabbix server:
+## :hammer_and_wrench: Configure Zabbix server:
 ### Configure the database credentials for zabbix server:
 Change parameters, in this file, we will add the password for the PostgreSQL user zabbixdb that we created earlier
 ```bash
@@ -303,7 +303,7 @@ LC_MEASUREMENT="en_US.UTF-8"
 LC_IDENTIFICATION="en_US.UTF-8"
 LC_ALL=
  ```
-## Configure Nginx for Zabbix frontend:
+## :desktop_computer: Configure Nginx for Zabbix frontend:
 Uncomment the listen and server_name lines with the parameters that will be used in the URL; this can be a DNS name or an IP address:
 ```bash
 sudo nano /etc/zabbix/nginx.conf
@@ -349,7 +349,7 @@ tcp6       0      0 :::111                  :::*                    LISTEN      
 tcp6       0      0 :::10050                :::*                    LISTEN      1446/zabbix_agentd
 tcp6       0      0 :::10051                :::*                    LISTEN      -
 ```
-## Final web server configuration
+## :link: Final web server configuration
 Both the initial setup wizard of Zabbix 7.0 LTS and Zabbix 7.4 are exactly the same, except for the title, so we will use the same one for both versions.
 
 ### Initial screen:
@@ -396,7 +396,7 @@ Congratulations! I hope you enjoy it a lot 🎉
 
 ![Congrats Zabbix](Images/7-LTS/Zabbix7_6-Congrats.png)
 
-## Login
+## :crossed_swords: Login
 Now that the installation is complete, we only need to log in to the web application using the default Zabbix credentials.
 
 - User: Admin
@@ -404,7 +404,7 @@ Now that the installation is complete, we only need to log in to the web applica
 
 ![Login Zabbix](Images/7-LTS/Zabbix7_7-login.png)
 
-## Front
+## :telescope: Front
 From this point on, a world of endless possibilities and deep control over our infrastructure begins. We strongly recommend changing the default credentials of the web Admin user, adjusting the profile, customizing the frontend widgets, and creating users with roles tailored to each use case depending on who will manage the system. Security can never be taken too seriously, and the information handled by monitoring systems is often highly sensitive.
 
 ![Front Zabbix](Images/7-LTS/Zabbix7_8-Front.png)
