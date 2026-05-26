@@ -9,22 +9,22 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 
 ---
 
-## :book: Indice
-* :cop: [Terminos de uso](./LICENSE)
-* :atom: [Caracteristicas](#atom-caracteristicas)
-* :white_check_mark: [Requisitos](#white_check_mark-requisitos)
-* :package: [Instalar Zabbix Repository](#package-instalar-zabbix-repository)
-* :hammer_and_wrench: [Instalar Zabbix Server, Frontend y Agent](#hammer_and_wrench-instalar-zabbix-server-frontend-y-agent)
-* :elephant: [Instalar y configurar PostgreSQL](#elephant-instalar-y-configurar-postgresql)
-  * [Crear la base de datos](#crear-la-base-de-datos)
-  * [Importar el esquema inicial](#importar-el-esquema-inicial)
-* :gear: [Configurar Zabbix Server](#gear-configurar-zabbix-server)
-* :rocket: [Iniciar y habilitar servicios](#rocket-iniciar-y-habilitar-servicios)
-* :globe_with_meridians: [Configuracion web inicial](#globe_with_meridians-configuracion-web-inicial)
-* :lock: [Ajustes de seguridad recomendados](#lock-ajustes-de-seguridad-recomendados)
-* :ballot_box_with_check: [Verificacion y comprobaciones](#ballot_box_with_check-verificacion-y-comprobaciones)
-* :rotating_light: [Problemas comunes y soluciones](#rotating_light-problemas-comunes-y-soluciones)
-* :books: [Referencias](#books-referencias)
+## :book: Index
+* :cop: [Terms of use](./LICENSE)
+* :atom: [Features](#atom-features)
+* :white_check_mark: [Requirements](#white_check_mark-requirements)
+* :package: [Install Zabbix Repository](#package-install-zabbix-repository)
+* :hammer_and_wrench: [Install Zabbix Server, Frontend and Agent](#hammer_and_wrench-install-zabbix-server-frontend-and-agent)
+* :elephant: [Install and Configure PostgreSQL](#elephant-install-and-configure-postgresql)
+  * [Create the database](#create-the-database)
+  * [Import the initial schema](#import-the-initial-schema)
+* :gear: [Configure Zabbix Server](#gear-configure-zabbix-server)
+* :rocket: [Start and enable services](#rocket-start-and-enable-services)
+* :globe_with_meridians: [Initial web configuration](#globe_with_meridians-initial-web-configuration)
+* :lock: [Recommended security settings](#lock-recommended-security-settings)
+* :ballot_box_with_check: [Verification and checks](#ballot_box_with_check-verification-and-checks)
+* :rotating_light: [Common problems and solutions](#rotating_light-common-problems-and-solutions)
+* :books: [References](#books-references)
 
 ## Install basic software 
 ### Install system packages:
