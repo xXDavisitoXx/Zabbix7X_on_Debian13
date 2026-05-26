@@ -6,8 +6,13 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 <p align="center">
   <img src="Images/Repository/Zabbix7-Cover.png" alt="Zabbix7-Cover" width="100%">
 </p>
-
 ---
+## :book: Index
+
+* :cop: [Terms of use](./LICENSE)
+* :atom: [Features](#recycle-features)
+* :white_check_mark: [Requisites](#white_check_mark-requisitos)
+
 ## :recycle: Features
 
 - Compatible with any Debian-based distribution
