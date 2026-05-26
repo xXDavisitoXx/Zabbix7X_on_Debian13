@@ -371,3 +371,12 @@ Perhaps the most important screen of the entire setup wizard; here we will enter
 - Database TLS encryption: Activated
   
 ![Config DB Zabbix](Images/7-LTS/Zabbix7_3-ConfigDB.png)
+
+### Fourth screen, server settings:
+In this screen, we will configure the server name, the time zone we belong to, and the color theme of the web application. For me, the dark theme will always be the best, but this is a matter of personal preference.
+
+- Zabbix server name: This is the name that will appear in the left sidebar when accessing Zabbix, acting as an identifier in case we have multiple Zabbix servers.
+- Default time zone: Time zone to which the server belongs. This field is important because it affects the timestamps of logs and the timeline of events and incidents recorded on the server.
+- Default theme: Color theme that the web application will use. Personally, I find the dark theme to be the most suitable, but this ultimately comes down to personal preference.
+
+![Time Zabbix](Images/7-LTS/Zabbix7_4-Time.png)
