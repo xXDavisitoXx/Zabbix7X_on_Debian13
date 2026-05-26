@@ -8,7 +8,7 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 </p>
 
 ---
-## :atom: Features
+## :recycle: Features
 
 Compatible with any Debian-based distribution
 The most powerful build you can make of Zabbix
