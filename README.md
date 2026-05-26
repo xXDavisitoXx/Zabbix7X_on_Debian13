@@ -9,7 +9,8 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 
 ---
 
-## Install  software system packages:
+## Install basic software 
+### Install system packages:
 First, we are going to install the software and the necessary tools to minimize the use of the root user.
 As root user:
 ```bash
@@ -56,8 +57,8 @@ Install packages:
 sudo apt install zabbix-server-pgsql zabbix-frontend-php php8.4-pgsql zabbix-nginx-conf zabbix-sql-scripts zabbix-agent nginx php-fpm
 ```
 ## Configure PostgreSQL 
-### Change the database directory to another disk
 
+### Change the database directory to another disk
 This step is optional. We recommend separating the database onto another disk for security, management, and performance reasons. By being on a separate disk, it won’t perform writes on the system disk, and if it fills up, it won’t bring the Debian system down.
 
 We have previously created a 20GB disk and mounted it as ext4 at /mnt/database
@@ -80,7 +81,7 @@ Start database service:
 ```bash
 sudo systemctl start postgresql
 ```
-Test new config:
+### Test new database config:
 When executing the command, the new path we created for the database directory should be reflected.
 ```bash
 sudo pg_lsclusters
@@ -131,7 +132,10 @@ Install TimeScaleDB from APT:
 ```bash
 sudo apt install timescaledb-2-postgresql-17=2.26.4~debian13-1709 timescaledb-2-loader-postgresql-17=2.26.4~debian13-1709
 ```
-Configure TimeScale for PostgreSQL:
+## Configure Software
+Now, with all the software installed on the server, we proceed to its configuration so that all the components fit together perfectly.
+
+### Tune TimeScale for PostgreSQL:
 The command sudo timescaledb-tune --quiet --yes is an automatic optimization tool that analyzes your server resources (such as RAM and CPU) and automatically adjusts the parameters of the postgresql.conf file
 ```bash
 sudo timescaledb-tune --quiet --yes
