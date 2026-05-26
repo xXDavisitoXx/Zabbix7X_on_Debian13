@@ -15,7 +15,7 @@ First, we are going to install the software and the necessary tools to minimize 
 As root user:
 ```bash
 apt update
-apt install rsync sudo gnupg curl
+apt install rsync sudo gnupg curl locales
 ```
 Add our system user to sudo:
 ```bash
@@ -268,8 +268,6 @@ EnableGlobalScripts=1
 For Zabbix to support any language, it must be installed on the operating system. By default, we will install en_US.UTF-8 and es_ES.UTF-8, as they are the most widely used worldwide
 :warning: In the language selector, if you want a language other than English, you must install it first on the operating system and then restart the Zabbix and PHP services.
 ```bash
-sudo apt update
-sudo apt install locales
 sudo dpkg-reconfigure locales
 ```
  Inside the menu, for example select:
