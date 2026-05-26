@@ -356,3 +356,17 @@ Here we configure the language that Zabbix will use by default in the web interf
 ### Second screen, prerequisites:
 Zabbix will check that all required components are installed in compatible versions. If you have followed this guide step by step, everything should appear as OK and you will only need to click “Next.” If anything is not OK, review it manually and restart the Zabbix services again.
 ![Requisitos Zabbix](Images/7-LTS/Zabbix7_2-Requisitos.png)
+
+### Third screen, database connection:
+Perhaps the most important screen of the entire setup wizard; here we will enter the database credentials that we created when configuring PostgreSQL and that we added in /etc/zabbix/zabbix_server.conf so that the server’s PHP can connect to the database.
+
+- Database type: PostgreSQL
+- Database host: localhost
+- Database port: 0 or 5432
+- Database name: dbzabbix
+- Database schema: leave empty
+- Store credentials in: Plain text
+- User: zabbixdb
+- Password: The password you created when setting up the “zabbixdb” user in PostgreSQL
+- Database TLS encryption: Activated
+![Config DB Zabbix](Images/7-LTS/Zabbix7_3-ConfigDB.png)
