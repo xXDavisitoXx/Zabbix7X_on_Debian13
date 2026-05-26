@@ -347,3 +347,8 @@ tcp6       0      0 :::10050                :::*                    LISTEN      
 tcp6       0      0 :::10051                :::*                    LISTEN      -
 ```
 ## Final web server configuration
+Both the initial setup wizard of Zabbix 7.0 LTS and Zabbix 7.4 are exactly the same, except for the title, so we will use the same one for both versions.
+
+### Initial screen: 
+Here we configure the language that Zabbix will use by default in the web interface (it can be changed later at any time from the options panel). The languages must be installed beforehand on the operating system in order to be selected (follow the "dpkg-reconfigure locales" section earlier in this guide). If you have not done so, you will need to install the corresponding language and restart the services again.
+![Portada Zabbix](Images/7-LTS/Zabbix7_1-portada.png)
