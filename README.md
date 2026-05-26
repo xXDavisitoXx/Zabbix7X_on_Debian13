@@ -29,18 +29,18 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 ## Install basic software 
 ## :book: Index
 * :cop: [Terms of use](./LICENSE)
-* :atom: [Features](#atom-features)
-* :white_check_mark: [Requirements](#white_check_mark-requirements)
-* :package: [Install Zabbix repository](#package-install-zabbix-repository)
-* :hammer_and_wrench: [Install Zabbix server, frontend and agent](#hammer_and_wrench-install-zabbix-server-frontend-and-agent)
-* :elephant: [Install and configure PostgreSQL](#elephant-install-and-configure-postgresql)
-* :gear: [Configure Zabbix server](#gear-configure-zabbix-server)
-* :rocket: [Start and enable services](#rocket-start-and-enable-services)
-* :globe_with_meridians: [Initial web configuration](#globe_with_meridians-initial-web-configuration)
-* :lock: [Recommended security settings](#lock-recommended-security-settings)
-* :ballot_box_with_check: [Verification and checks](#ballot_box_with_check-verification-and-checks)
-* :rotating_light: [Common problems and solutions](#rotating_light-common-problems-and-solutions)
-* :books: [References](#books-references)
+* :atom: [Features](#-features)
+* :white_check_mark: [Requirements](#-requirements)
+* :package: [Install Zabbix repository](#-install-zabbix-repository)
+* :hammer_and_wrench: [Install Zabbix server frontend and agent](#-install-zabbix-server-frontend-and-agent)
+* :elephant: [Install and configure PostgreSQL](#-install-and-configure-postgresql)
+* :gear: [Configure Zabbix server](#-configure-zabbix-server)
+* :rocket: [Start and enable services](#-start-and-enable-services)
+* :globe_with_meridians: [Initial web configuration](#-initial-web-configuration)
+* :lock: [Recommended security settings](#-recommended-security-settings)
+* :ballot_box_with_check: [Verification and checks](#-verification-and-checks)
+* :rotating_light: [Common problems and solutions](#-common-problems-and-solutions)
+* :books: [References](#-references)
 ### Install system packages:
 First, we are going to install the software and the necessary tools to minimize the use of the root user.
 As root user:
