@@ -302,7 +302,7 @@ LC_MEASUREMENT="en_US.UTF-8"
 LC_IDENTIFICATION="en_US.UTF-8"
 LC_ALL=
  ```
-### Configure Nginx for Zabbix frontend:
+## Configure Nginx for Zabbix frontend:
 Uncomment the listen and server_name lines with the parameters that will be used in the URL; this can be a DNS name or an IP address:
 ```bash
 sudo nano /etc/zabbix/nginx.conf
