@@ -15,7 +15,7 @@ First, we are going to install the software and the necessary tools to minimize 
 As root user:
 ```bash
 apt update
-apt install rsync sudo gnupg curl locales
+apt install rsync sudo gnupg curl locales net-tools
 ```
 Add our system user to sudo:
 ```bash
@@ -319,4 +319,29 @@ sudo systemctl restart zabbix-server zabbix-agent nginx php8.4-fpm
 Enable services: 
 ```bash
 sudo systemctl enable zabbix-server zabbix-agent nginx php8.4-fpm postgresql
+```
+Check ports avaliable:
+```bash
+netstat -tnlp
+```
+```bash
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.1:5432          0.0.0.0:*               LISTEN      -
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      -
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      -
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      -
+tcp        0      0 0.0.0.0:10050           0.0.0.0:*               LISTEN      1446/zabbix_agentd
+tcp        0      0 0.0.0.0:10051           0.0.0.0:*               LISTEN      -
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      -
+tcp6       0      0 ::1:5432                :::*                    LISTEN      -
+tcp6       0      0 :::22                   :::*                    LISTEN      -
+tcp6       0      0 :::80                   :::*                    LISTEN      -
+tcp6       0      0 ::1:6010                :::*                    LISTEN      -
+tcp6       0      0 :::111                  :::*                    LISTEN      -
+tcp6       0      0 :::10050                :::*                    LISTEN      1446/zabbix_agentd
+tcp6       0      0 :::10051                :::*                    LISTEN      -
 ```
