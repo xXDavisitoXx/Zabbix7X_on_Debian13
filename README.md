@@ -9,9 +9,8 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 
 ---
 
-## Install software
+## Install  software system packages:
 First, we are going to install the software and the necessary tools to minimize the use of the root user.
-### Install system packages:
 As root user:
 ```bash
 apt update
