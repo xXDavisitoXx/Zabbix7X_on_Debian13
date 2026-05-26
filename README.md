@@ -12,7 +12,7 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 
 * :cop: [Terms of use](./LICENSE)
 * :atom: [Features](#recycle-features)
-* :white_check_mark: [Requisites](#white_check_mark-requisitos)
+* :white_check_mark: [Requirements](#white_check_mark-requisitos)
 
 ## :recycle: Features
 
