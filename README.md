@@ -212,6 +212,12 @@ If you use Zabbix7.4:
 ```bash
 sudo -u postgres psql -d dbzabbix -f /usr/share/zabbix/sql-scripts/postgresql/timescaledb/schema.sql
 ```
+
+❌ If you missed any of these steps or something went wrong, the best approach is to drop the database and recreate it following the previous steps
+```bash
+sudo -u postgres dropdb dbzabbix
+```
+
 Test TimeScaleDB:
 This test confirms that TimescaleDB is working in Zabbix because it verifies that the historical tables (such as history or trends) have been converted into hypertables, which is TimescaleDB’s special format for handling time-series data. If these tables appear in the query results, it means the extension is active, properly integrated into the database, and managing automatic time-based partitioning.
 ```bash
