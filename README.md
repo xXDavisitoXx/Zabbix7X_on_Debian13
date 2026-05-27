@@ -41,6 +41,12 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 - Between 2 and 4 CPU cores, depending on the environment
 - Internet connection to install software
 
+## Resources:
+- https://www.postgresql.org/docs/
+- https://www.zabbix.com/manuals
+- https://www.tigerdata.com/docs
+- https://nginx.org/en/docs/
+
 ## :gear: Install basic software 
 
 ### Install system packages:
