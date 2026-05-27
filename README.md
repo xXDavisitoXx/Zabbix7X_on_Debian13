@@ -1,4 +1,4 @@
-# Zabbix7.X on Debian13
+# Zabbix7.X on Debian13 + PostgreSQL + TimeScaleDB + Nginx
 
 In this guide, we will teach the correct installation of Zabbix 7 step by step, covering both the LTS version and the latest 7.4 release on Debian 13, using a PostgreSQL database with the TimeScaleDB plugin and the Nginx web server.
 
