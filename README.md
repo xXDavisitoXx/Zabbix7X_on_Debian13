@@ -13,6 +13,7 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 * 👮 [Terms of use](./LICENSE)
 * ♻️ [Features](#recycle-features)
 * ✅ [Requirements](#white_check_mark-requirements)
+* 📚 [Resources](#books-resources)
 * ⚙️ [Install basic software](#gear-install-basic-software)
 * 🧰 [Configure PostgreSQL](#toolbox-configure-postgresql)
 * 🕛 [Configure TimeScaleDB](#clock12-configure-timescaledb)
@@ -41,7 +42,7 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 - Between 2 and 4 CPU cores, depending on the environment
 - Internet connection to install software
 
-## Resources:
+## :books: Resources:
 - https://www.postgresql.org/docs/
 - https://www.zabbix.com/manuals
 - https://www.tigerdata.com/docs
