@@ -219,8 +219,8 @@ sudo -u postgres dropdb dbzabbix
 ```
 
 Test TimeScaleDB:
-
 This test confirms that TimescaleDB is working in Zabbix because it verifies that the historical tables (such as history or trends) have been converted into hypertables, which is TimescaleDB’s special format for handling time-series data. If these tables appear in the query results, it means the extension is active, properly integrated into the database, and managing automatic time-based partitioning.
+
 ```bash
  sudo -u postgres psql -d dbzabbix -c "SELECT hypertable_name FROM timescaledb_information.hypertables;"
 ```
