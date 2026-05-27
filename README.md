@@ -43,10 +43,10 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 - Internet connection to install software
 
 ## :books: Resources:
-- https://www.postgresql.org/docs/
-- https://www.zabbix.com/manuals
-- https://www.tigerdata.com/docs
-- https://nginx.org/en/docs/
+-  PostgreSQL DB: https://www.postgresql.org/docs/
+-  Zabbix: https://www.zabbix.com/manuals
+- TimeScaleDB: https://www.tigerdata.com/docs
+- Nginx: https://nginx.org/en/docs/
 
 ## :gear: Install basic software 
 
