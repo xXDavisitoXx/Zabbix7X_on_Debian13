@@ -316,8 +316,8 @@ EnableGlobalScripts=1
 ```
 ### Configure language for Zabbix frontend:
 For Zabbix to support any language, it must be installed on the operating system. By default, we will install en_US.UTF-8 and es_ES.UTF-8, as they are the most widely used worldwide
-:warning: In the language selector, if you want a language other than English, you must install it first on the operating system and then restart the Zabbix and PHP services.
 
+:warning: In the language selector, if you want a language other than English, you must install it first on the operating system and then restart the Zabbix and PHP services.
 ```bash
 sudo dpkg-reconfigure locales
 ```
