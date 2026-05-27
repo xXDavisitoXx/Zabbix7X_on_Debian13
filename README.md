@@ -6,7 +6,7 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 <p align="center">
   <img src="Images/Repository/Zabbix7-Cover.png" alt="Zabbix7-Cover" width="100%">
 </p>
----
+
 
 ## :book: Index
 
