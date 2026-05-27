@@ -31,7 +31,7 @@ In this guide, we will teach the correct installation of Zabbix 7 step by step, 
 - TimeScaleDB will speed up PostgreSQL and compress the database
 - Nginx is among the top web servers
 - Database installation on a separate disk
-- Guide 100% tested in production environments
+- Guide 100% compatible with production environments
 
 ## :white_check_mark: Requirements
 
