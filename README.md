@@ -102,21 +102,21 @@ sudo apt install zabbix-server-pgsql zabbix-frontend-php php8.4-pgsql zabbix-ngi
 ### Change the database directory to another disk
 This step is optional. We recommend separating the database onto another disk for security, management, and performance reasons. By being on a separate disk, it won’t perform writes on the system disk, and if it fills up, it won’t bring the Debian system down.
 
-We have previously created a 20GB disk and mounted it as ext4 at /mnt/database
+We have previously created a 20GB disk and mounted it as ext4 at /mnt/storedb
 
 ❌ If you don’t want to change the PostgreSQL directory, you can safely skip this step
 ```bash
 sudo systemctl stop postgresql
-sudo mkdir -p /mnt/database/postgresql/17/main/ # Or the custom path where you want the database to live
-sudo rsync -av /var/lib/postgresql/17/main/ /mnt/database/postgresql/17/main/
-sudo chown -R postgres:postgres /mnt/database/postgresql
+sudo mkdir -p /mnt/storedb/postgresql/17/main/ # Or the custom path where you want the database to live
+sudo rsync -av /var/lib/postgresql/17/main/ /mnt/storedb/postgresql/17/main/
+sudo chown -R postgres:postgres /mnt/storedb/postgresql
 ```
 Edit data directory:
 ```bash
  sudo nano /etc/postgresql/17/main/postgresql.conf
 ```
 ```bash
-data_directory = '/mnt/database/postgresql/17/main'  # use data in another directory
+data_directory = '/mnt/storedb/postgresql/17/main'  # use data in another directory
 ```
 Start database service:
 ```bash
@@ -129,7 +129,7 @@ sudo pg_lsclusters
 ```
 ```bash
 Ver Cluster Port Status Owner    Data directory              Log file
-17  main    5432 online postgres /mnt/database/postgresql/17/main /var/log/postgresql/postgresql-17-main.log
+17  main    5432 online postgres /mnt/storedb/postgresql/17/main /var/log/postgresql/postgresql-17-main.log
 ```
 ### Configure database acces:
 In most step-by-step guides, the credentials are usually zabbix / zabbix. This often creates confusion between the system user, the database user, or even within the command syntax that follows. We have changed the names for a much more secure installation and one that is easier to understand
