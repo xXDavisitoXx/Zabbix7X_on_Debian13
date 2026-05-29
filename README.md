@@ -140,9 +140,9 @@ sudo -u postgres createuser --pwprompt usrzabbixdb
 ```
 ⚠️ Save the password you set for later use
 
-Create database dbzabbix:
+Create database datazabbixdb:
 ```bash
-sudo -u postgres createdb -O usrzabbixdb dbzabbix
+sudo -u postgres createdb -O usrzabbixdb datazabbixdb
 ```
 
 ### Install TimeScaleDB plugin:
@@ -185,9 +185,9 @@ Restart database service:
 ```bash
 sudo systemctl restart postgresql
 ```
-Activate TimeScaleDB on dbzabbix:
+Activate TimeScaleDB on datazabbixdb:
 ```bash
-sudo -u postgres psql -d dbzabbix -c "CREATE EXTENSION IF NOT EXISTS timescaledb;"
+sudo -u postgres psql -d datazabbixdb -c "CREATE EXTENSION IF NOT EXISTS timescaledb;"
 ```
 
 ### Import schema database:
@@ -195,34 +195,34 @@ sudo -u postgres psql -d dbzabbix -c "CREATE EXTENSION IF NOT EXISTS timescaledb
 
 If you use Zabbix 7.0 LTS:
 ```bash
-zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | psql -U usrzabbixdb -d dbzabbix -h localhost
+zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | psql -U usrzabbixdb -d datazabbixdb -h localhost
 ```
 If you use Zabbix7.4:
 ```bash
-zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | psql -U usrzabbixdb -d dbzabbix -h localhost
+zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | psql -U usrzabbixdb -d datazabbixdb -h localhost
 ```
 ### Execute schema optimization TimeScaleDB:
 
 ⚠️ The paths for executing schema optimizations changed starting from Zabbix 7.4
 If you use Zabbix 7.0 LTS:
 ```bash
-sudo -u postgres psql -d dbzabbix -f /usr/share/zabbix-sql-scripts/postgresql/timescaledb/schema.sql
+sudo -u postgres psql -d datazabbixdb -f /usr/share/zabbix-sql-scripts/postgresql/timescaledb/schema.sql
 ```
 If you use Zabbix7.4:
 ```bash
-sudo -u postgres psql -d dbzabbix -f /usr/share/zabbix/sql-scripts/postgresql/timescaledb/schema.sql
+sudo -u postgres psql -d datazabbixdb -f /usr/share/zabbix/sql-scripts/postgresql/timescaledb/schema.sql
 ```
 
 ❌ If you missed any of these steps or something went wrong, the best approach is to drop the database and recreate it following the previous steps
 ```bash
-sudo -u postgres dropdb dbzabbix
+sudo -u postgres dropdb datazabbixdb
 ```
 
 Test TimeScaleDB:
 This test confirms that TimescaleDB is working in Zabbix because it verifies that the historical tables (such as history or trends) have been converted into hypertables, which is TimescaleDB’s special format for handling time-series data. If these tables appear in the query results, it means the extension is active, properly integrated into the database, and managing automatic time-based partitioning.
 
 ```bash
- sudo -u postgres psql -d dbzabbix -c "SELECT hypertable_name FROM timescaledb_information.hypertables;"
+ sudo -u postgres psql -d datazabbixdb -c "SELECT hypertable_name FROM timescaledb_information.hypertables;"
 ```
 Correct result:
 ```bash
@@ -272,7 +272,7 @@ sudo nano /etc/zabbix/zabbix_server.conf
 # Default:
 # DBName=
 
-DBName=dbzabbix
+DBName=datazabbixdb
 
 ### Option: DBSchema
 #       Schema name. Used for PostgreSQL.
@@ -415,7 +415,7 @@ If something is incorrect either in the guide or in the values entered in the fi
 - Database type: PostgreSQL
 - Database host: localhost
 - Database port: 0 or 5432
-- Database name: dbzabbix
+- Database name: datazabbixdb
 - Database schema: leave empty
 - Store credentials in: Plain text
 - User: usrzabbixdb
