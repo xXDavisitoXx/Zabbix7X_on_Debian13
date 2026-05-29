@@ -134,15 +134,15 @@ Ver Cluster Port Status Owner    Data directory              Log file
 ### Configure database acces:
 In most step-by-step guides, the credentials are usually zabbix / zabbix. This often creates confusion between the system user, the database user, or even within the command syntax that follows. We have changed the names for a much more secure installation and one that is easier to understand
 
-Create user zabbixdb:
+Create user usrzabbixdb:
 ```bash
-sudo -u postgres createuser --pwprompt zabbixdb
+sudo -u postgres createuser --pwprompt usrzabbixdb
 ```
 ⚠️ Save the password you set for later use
 
 Create database dbzabbix:
 ```bash
-sudo -u postgres createdb -O zabbixdb dbzabbix
+sudo -u postgres createdb -O usrzabbixdb dbzabbix
 ```
 
 ### Install TimeScaleDB plugin:
@@ -195,11 +195,11 @@ sudo -u postgres psql -d dbzabbix -c "CREATE EXTENSION IF NOT EXISTS timescaledb
 
 If you use Zabbix 7.0 LTS:
 ```bash
-zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | psql -U zabbixdb -d dbzabbix -h localhost
+zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | psql -U usrzabbixdb -d dbzabbix -h localhost
 ```
 If you use Zabbix7.4:
 ```bash
-zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | psql -U zabbixdb -d dbzabbix -h localhost
+zcat /usr/share/zabbix/sql-scripts/postgresql/server.sql.gz | psql -U usrzabbixdb -d dbzabbix -h localhost
 ```
 ### Execute schema optimization TimeScaleDB:
 
@@ -257,7 +257,7 @@ AllowUnsupportedDBVersions=1
 ```
 ## :hammer_and_wrench: Configure Zabbix server:
 ### Configure the database credentials for zabbix server:
-Change parameters, in this file, we will add the password for the PostgreSQL user zabbixdb that we created earlier
+Change parameters, in this file, we will add the password for the PostgreSQL user usrzabbixdb that we created earlier
 ```bash
 sudo nano /etc/zabbix/zabbix_server.conf
 ```
@@ -288,7 +288,7 @@ DBName=dbzabbix
 # Default:
 # DBUser=
 
-DBUser=zabbixdb
+DBUser=usrzabbixdb
 
 ### Option: DBPassword
 #       Database password.
@@ -418,8 +418,8 @@ If something is incorrect either in the guide or in the values entered in the fi
 - Database name: dbzabbix
 - Database schema: leave empty
 - Store credentials in: Plain text
-- User: zabbixdb
-- Password: The password you created when setting up the “zabbixdb” user in PostgreSQL
+- User: usrzabbixdb
+- Password: The password you created when setting up the “usrzabbixdb” user in PostgreSQL
 - Database TLS encryption: Activated
   
 ![Config DB Zabbix](Images/7-LTS/Zabbix7_3-ConfigDB.png)
